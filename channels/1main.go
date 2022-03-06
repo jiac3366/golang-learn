@@ -23,7 +23,6 @@ func worker(id int, c chan int) {
 
 }
 
-// 自建 channel
 // 返回一个外部只能向其中发数据的channel 所以函数里面只能收数据,chan[]数组的类型也要改成chan<- int
 func createWorker(id int) chan<- int {
 	c := make(chan int)
